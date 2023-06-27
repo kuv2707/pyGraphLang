@@ -1,3 +1,6 @@
+# defs block should preceed rels block
+
+
 defs:
     kislay:
         key=value
@@ -27,11 +30,22 @@ defs:
 <relation> :bidirectional, same as 1
 
 
-rels:
+reels:
     kislay-<-friend->-lalit
     kislay-<-friend->-vandan
     vandan--enemy->-ayush
     kislay-<-roommate->-varun
     lalit-<-roommate->-laxman
 
+adjmat:
+    0, friend, 0, 0, 1, 0, 0, 0, 0, 0
+    0, 0, 1, 0, 0, 1, 0, 0, 0, 0
+    0, 0, 0, 1, 0, 0, 1, 0, 0, 0
+    0, 0, 0, 0, 1, 0, 0, 1, 0, 0
+    0, 0, 0, 0, 0, 1, 0, 0, 1, 0
+    0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+    0, 0, 0, 0, 0, 0, 0, 1, 0, 0
+    0, 0, 0, 0, 0, 0, 0, 0, 1, 0
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+    0, 0, 0, f, 0, 0, 0, 0, 0, 0
 fileend

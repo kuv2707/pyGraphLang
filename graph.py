@@ -29,6 +29,9 @@ RESET = "\033[0m"
 class Graph:
     def __init__(self):
         self.nodes = {}
+    
+    def createAdjacencyMatrix(a):
+        return
 
 
 
@@ -37,9 +40,10 @@ class Node:
         self.name = name
         self.vars = {}
         self.adjacent = []
+        self.nodeCount = 0
 
     def __str__(self):
-        return f"{BLUE + self.name + RESET}---[vars-{GREEN + str(self.vars) + RESET}  adjs-{'{'} {MAGENTA + ', '.join([f'{node[0].name} : {node[1]}' for node in self.adjacent]) + RESET} {'}'}]"
+        return f"{BG_WHITE + BLACK + self.name + RESET}---[vars-{GREEN + str(self.vars) + RESET}  adjs-{'{'} {MAGENTA + ', '.join([f'{node[0].name} : {node[1]}' for node in self.adjacent]) + RESET} {'}'}]"
 
     def add_adjacent(self, node):
         self.adjacent.append(node)
