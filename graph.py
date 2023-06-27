@@ -39,7 +39,7 @@ class Node:
         self.adjacent = []
 
     def __str__(self):
-        return f"{BLUE + self.name + RESET}---{GREEN + str(self.vars) + RESET}"
+        return f"{BLUE + self.name + RESET}---[vars-{GREEN + str(self.vars) + RESET}  adjs-{'{'} {MAGENTA + ', '.join([f'{node[0].name} : {node[1]}' for node in self.adjacent]) + RESET} {'}'}]"
 
     def add_adjacent(self, node):
         self.adjacent.append(node)

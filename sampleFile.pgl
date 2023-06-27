@@ -21,14 +21,17 @@ defs:
     ayush:
         fds=reww
 
---relation-- :bidirectional
---relation-> :directed right
-<-relation-- :directed left
-<--relation-->: bidirectional, same as 1
+-relation- :bidirectional
+-relation> :directed right
+<relation- :directed left
+<relation> :bidirectional, same as 1
 
 
 rels:
-    kislay-<friend>-lalit
-    vandan->enemy-ayush
+    kislay-<-friend->-lalit
+    kislay-<-friend->-vandan
+    vandan--enemy->-ayush
+    kislay-<-roommate->-varun
+    lalit-<-roommate->-laxman
 
 fileend
