@@ -1,0 +1,34 @@
+defs:
+    kislay:
+        key=value
+        ayush=owner
+    lalit:
+        key=valor
+    varun:
+        key=valor
+    vandan:
+        key=valor
+    vaibhav:
+        key=valor
+    utkarsh:
+        key=valor
+    surya:
+        key=valor
+    kunal:
+        key=valor
+    laxman:
+        key=valor
+    ayush:
+        fds=reww
+
+--relation-- :bidirectional
+--relation-> :directed right
+<-relation-- :directed left
+<--relation-->: bidirectional, same as 1
+
+
+rels:
+    kislay-<friend>-lalit
+    vandan->enemy-ayush
+
+fileend

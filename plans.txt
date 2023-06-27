@@ -1,0 +1,3 @@
+ways to represent graph:
+specifying connections
+adjacency matrix
