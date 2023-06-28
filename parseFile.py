@@ -1,4 +1,5 @@
 import graph
+from typing import *
 TAB = "    "
 
 
@@ -20,7 +21,7 @@ def parseFile(filename='./sampleFile.pgl'):
     return Graph
 
 
-def populateDefs(lines, index, Graph):
+def populateDefs(lines: List[str], index: int, Graph: graph.Graph):
     while lines[index].startswith(TAB):
         nodename = lines[index].strip()
         print("found node: "+nodename)
@@ -81,6 +82,6 @@ def modelAdjacencyMatrix(lines, index, nodes):
         index+=1
 
 
-def notFalse(str):
+def notFalse(str: str):
     return not(str == "0" or str == 0)
 

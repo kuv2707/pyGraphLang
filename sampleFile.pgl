@@ -34,7 +34,7 @@ defs:
 <relation> :bidirectional, same as 1
 
 
-rels:
+reels:
     kislay-<-friend->-lalit
     kislay-<-friend->-vandan
     vandan--enemy->-ayush

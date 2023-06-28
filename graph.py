@@ -1,15 +1,12 @@
 import consoleColors as cc
 
-
-
 class Graph:
     def __init__(self):
         self.nodes = {}
         self.nodeCount = 0
     def createAdjacencyMatrix(a):
         return
-
-
+   
 
 class Node:
     def __init__(self, name):
@@ -23,3 +20,16 @@ class Node:
 
     def add_adjacent(self, node):
         self.adjacent.append(node)
+
+
+ 
+def dfs(node: Node,accum={},ret=[]):
+    accum[node.name]=True
+    for a_node,reln in node.adjacent:
+        try:
+            accum[a_node.name]
+                
+        except:
+            ret.append(node.name + "-" + reln + "-")
+            dfs(a_node,accum,ret)
+    return ret
