@@ -7,12 +7,16 @@ defs:
         ayush=owner
     lalit:
         key=valor
+        money=infinite
     varun:
         key=valor
     vandan:
         key=valor
     vaibhav:
         key=valor
+
+
+defs:
     utkarsh:
         key=valor
     surya:
@@ -30,7 +34,7 @@ defs:
 <relation> :bidirectional, same as 1
 
 
-reels:
+rels:
     kislay-<-friend->-lalit
     kislay-<-friend->-vandan
     vandan--enemy->-ayush
@@ -39,10 +43,10 @@ reels:
 
 adjmat:
     0, friend, 0, 0, 1, 0, 0, 0, 0, 0
-    0, 0, 1, 0, 0, 1, 0, 0, 0, 0
+    friend, 0, 1, 0, 0, 1, 0, 0, 0, 0
     0, 0, 0, 1, 0, 0, 1, 0, 0, 0
     0, 0, 0, 0, 1, 0, 0, 1, 0, 0
-    0, 0, 0, 0, 0, 1, 0, 0, 1, 0
+    0, 0, 0, 0, 0, customer, 0, 0, 1, 0
     0, 0, 0, 0, 0, 0, 1, 0, 0, 1
     0, 0, 0, 0, 0, 0, 0, 1, 0, 0
     0, 0, 0, 0, 0, 0, 0, 0, 1, 0
