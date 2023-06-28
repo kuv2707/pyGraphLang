@@ -1,3 +1,4 @@
-ways to represent graph:
-specifying connections
-adjacency matrix
+typed variables
+operations on variables
+references to nodes as variables
+

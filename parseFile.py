@@ -24,7 +24,7 @@ def parseFile(filename='./sampleFile.pgl'):
 def populateDefs(lines: List[str], index: int, Graph: graph.Graph):
     while lines[index].startswith(TAB):
         nodename = lines[index].strip()
-        print("found node: "+nodename)
+        # print("found node: "+nodename)
         node = graph.Node(nodename[0:-1])
         Graph.nodes[node.name] = node
         Graph.nodes[Graph.nodeCount] = node
@@ -51,7 +51,7 @@ def establishRels(lines, index, nodes):
         if line.startswith(TAB) == False:
             return index-1
         toks = line.strip().split("-")
-        print("tokens",toks)
+        # print("tokens",toks)
         left = nodes[toks[0]]
         right = nodes[toks[-1]]
         rel = toks[2]
