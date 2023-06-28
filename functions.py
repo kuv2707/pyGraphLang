@@ -9,10 +9,12 @@ def start(Graph: graph.Graph):
     subject = Graph.nodes[0]
     while True:
         command=input(">")
-        print(command)
-        if(command == "X"):
+        
+        if command == "X":
             print(cc.RED + "Terminating")
             return
-        if(command == "dfs"):
+        elif command == "dfs" :
             ret: List[graph.Node] = graph.dfs(subject)
             print("DFS traversal is: " + "".join(ret))
+        else:
+            print("Unknown command: " + command)

@@ -30,6 +30,6 @@ def dfs(node: Node,accum={},ret=[]):
             accum[a_node.name]
                 
         except:
-            ret.append(node.name + "-" + reln + "-")
+            ret.append(cc.YELLOW + node.name + cc.BLUE + "-[" + reln + "]-")
             dfs(a_node,accum,ret)
     return ret
