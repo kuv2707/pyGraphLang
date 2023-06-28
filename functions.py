@@ -22,5 +22,8 @@ def start(Graph: graph.Graph):
             queue.put(subject)
             ret: List[graph.Node] = graph.bfs(queue)
             print("BFS traversal is: " + "".join(ret))
+        elif command == "print":
+            for i in range(0,Graph.nodeCount):
+                print(Graph.nodes[i])
         else:
             print("Unknown command: " + command)

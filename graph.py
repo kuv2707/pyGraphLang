@@ -35,13 +35,11 @@ def dfs(node: Node,visited={},ret=[]):
 def bfs(queue: Queue, visited={}, ret=[]):
         
     while queue.empty() == False:
-        node=queue.get()
-        if node.name in visited:
-            continue
-        visited[node.name]=True
+        node=queue.get()        
         ret.append(cc.YELLOW + node.name + cc.BLUE + "-["  + "-" + "]-")
         for a_node,reln in node.adjacent:
             if a_node.name not in visited:
+                visited[a_node.name]=True
                 queue.put(a_node)
                 
     print(cc.RESET)
