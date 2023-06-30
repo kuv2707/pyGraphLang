@@ -12,11 +12,11 @@ def parseFile(filename='./sampleFile.pgl'):
         for index, line in enumerate(lines):
             if line == "defs:":
                 populateDefs(lines, index+1, Graph)
-                
+
             if line == "rels:":
                 establishRels(lines, index+1, Graph.nodes)
             if line == "adjmat:":
-                modelAdjacencyMatrix(lines,index+1, Graph.nodes)
+                modelAdjacencyMatrix(lines, index+1, Graph.nodes)
 
     return Graph
 
@@ -28,10 +28,9 @@ def populateDefs(lines: List[str], index: int, Graph: graph.Graph):
         node = graph.Node(nodename[0:-1])
         Graph.nodes[node.name] = node
         Graph.nodes[Graph.nodeCount] = node
-        Graph.nodeCount+=1
+        Graph.nodeCount += 1
         index = scrapeVars(lines, index+1, node)
         index += 1
-    
 
 
 def scrapeVars(lines, index, node):
@@ -58,10 +57,12 @@ def establishRels(lines, index, nodes):
         l_r = toks[3]
         r_l = toks[1]
         if l_r == ">":
-            left.adjacent.append((right,rel))
+            left.adjacent.append((right, rel))
+            print(left.name + "k baad "+right.name+"as "+rel)
         if r_l == '<':
-            right.adjacent.append((left,rel))
-        print(left.name, rel, right.name)
+            right.adjacent.append((left, rel))
+            print(right.name + "k baad "+left.name+"as "+rel)
+        # print(left.name, rel, right.name)
         index += 1
 
 
@@ -72,16 +73,15 @@ def modelAdjacencyMatrix(lines, index, nodes):
         if line.startswith(TAB) == False:
             return index-1
         toks = line.strip().split(",")
-        
-        for j,tok in enumerate(toks):
+
+        for j, tok in enumerate(toks):
             if notFalse(tok.strip()):
                 n1 = nodes[i]
                 n2 = nodes[j]
-                n1.adjacent.append((n2,tok.strip()))
-        i+=1
-        index+=1
+                n1.adjacent.append((n2, tok.strip()))
+        i += 1
+        index += 1
 
 
 def notFalse(str: str):
-    return not(str == "0" or str == 0)
-
+    return not (str == "0" or str == 0)

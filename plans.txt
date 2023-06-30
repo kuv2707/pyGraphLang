@@ -2,3 +2,4 @@ typed variables
 operations on variables
 references to nodes as variables
 
+it should scan all defs blocks first, then adjmat block, then rels block

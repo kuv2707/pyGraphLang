@@ -34,14 +34,15 @@ defs:
 <relation> :bidirectional, same as 1
 
 
-reels:
+rels:
     kislay-<-friend->-lalit
-    kislay-<-friend->-vandan
+    kislay--friend->-vandan
     vandan--enemy->-ayush
-    kislay-<-roommate->-varun
-    lalit-<-roommate->-laxman
+    kislay--roommate->-varun
+    lalit--roommate->-laxman
+    laxman-<-friend->-kislay
 
-adjmat:
+advdjmat:
     0, friend, 0, 0, 1, 0, 0, 0, 0, 0
     friend, 0, 1, 0, 0, 1, 0, 0, 0, 0
     0, 0, 0, 1, 0, 0, 1, 0, 0, 0
